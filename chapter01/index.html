@@ -11,12 +11,21 @@
 
     </div>
 </body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script>
-    const heading = document.createElement("h1");
-    heading.innerHTML = "Its First Class Say Hello World";
+    // const heading = document.createElement("h1");
+    // heading.innerHTML = "Its First Class Say Hello World";
 
-    const root = document.getElementById("root");
-    root.appendChild(heading);
+    // const root = document.getElementById("root");
+    // root.appendChild(heading);
+    // React.createElement("h1",{props object (attributes)},"Inner Html Stuff"); returns a js object 
+    const heading = React.createElement("h1",{
+        id:"heading",
+        developer:"cheeku"
+    },"Hello This is My First Class With React");
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(heading);
 
 </script>
 </html>
